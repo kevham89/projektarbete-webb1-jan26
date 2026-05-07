@@ -3,6 +3,7 @@ body{
     padding: 0px;
     display: grid;
     width: 80%;
+    background-color: burlywood;
     max-width: 1200px;
     min-height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
