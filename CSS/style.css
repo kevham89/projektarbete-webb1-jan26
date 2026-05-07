@@ -1,17 +1,24 @@
 body{
-    margin: 0px;
+    margin: 0 auto;
     padding: 0px;
+    display: grid;
+    width: 80%;
+    max-width: 1200px;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav " "main main main main main aside" "footer footer footer footer footer footer";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 header{
     background-color: gray;
-    justify-content: center;
     text-align: center;
+    grid-area: header;
 }
 nav{
-background-color: lightblue;
-width: 100%;
-justify-content: center;
+background-color: blue;
 text-align: center;
+grid-area: nav;
 }
 
 nav a{
@@ -21,4 +28,54 @@ nav a{
     border-width: 1px;
     padding: 10px;
     text-decoration: none;
+}
+
+main{
+background-color: lightcoral;
+grid-area: main;
+}
+
+article{
+    background-color: lightgreen;
+    padding: 10px;
+
+}
+
+aside{
+    justify-items: end;
+    background-color: lightblue;
+    grid-area: aside;
+    width: 100%;
+}
+
+section{
+    background-color: lightseagreen;
+
+}
+
+footer{
+    background-color: gray;
+    grid-area: footer;
+    height: 100px;
+}
+
+
+
+
+figure{
+    padding: 0px;
+    margin: 0px;
+}
+
+p{
+    font-size: 0.875rem;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1rem;
+    font-style: italic;
+
 }
