@@ -15,25 +15,41 @@ header{
     background-color: gray;
     text-align: center;
     grid-area: header;
+    align-self: top;
+    height: 100px;
 }
 nav{
-background-color: blue;
-text-align: center;
-grid-area: nav;
+    background-color: blue;
+    grid-area: nav;
+    align-self: top;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+        
 }
-
 nav a{
     background-color: aliceblue;
-    font-size: 20px;
-    border-style: solid;
-    border-width: 1px;
+    font-size: 1rem;
+    border: 1px solid black;
     padding: 10px;
     text-decoration: none;
 }
+ul{
+    height: 50px;
+    background-color: aqua;
+    text-decoration: none;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+    float: right;
+}
 
 main{
-background-color: lightcoral;
-grid-area: main;
+    background-color: lightcoral;
+    grid-area: main;
 }
 
 article{
@@ -59,13 +75,14 @@ footer{
     grid-area: footer;
     height: 100px;
 }
-
-
-
-
+.sticky{
+    align-self: top;
+    position: sticky;
+    top: 50px;  
+}
 figure{
     padding: 0px;
-    margin: 0px;
+    margin: 0px; 
 }
 
 p{
@@ -79,4 +96,19 @@ h4{
     font-size: 1rem;
     font-style: italic;
 
+}
+
+@media (min-width:901px) {
+}
+
+@media (max-width: 600px) {
+    aside{
+        display: none;
+    }
+    body{
+        grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav" "main main main main main main" "footer footer footer footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+    
 }
