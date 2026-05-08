@@ -80,23 +80,24 @@ aside{
     width: 100%;
     margin-top: 72px;
     border: 1px solid #8b1a1a;
-x
-
 }
 .aside-sticky{
     display: flex;
     flex-direction: column;
     top: 50px;
     position: sticky;
-
 }
 
 figure{
     padding: 0px;
     margin: 0px;
     border: 1px solid #8b1a1a;
-    
 }
+figure img{
+    width: 100%;
+    height: auto;
+}
+
 section{
     background-color: #c8b888;
     padding: 10px;
