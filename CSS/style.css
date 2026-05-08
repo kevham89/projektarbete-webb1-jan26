@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box; 
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     color: #1a1a1a;
     margin: 0 auto;
@@ -8,21 +11,27 @@ body{
     display: grid;
     width: 80%;
     background-color: #e8d9b0;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     max-width: 1200px;
-    min-width: 600px;
     min-height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
     grid-template-rows: auto auto 1fr auto;
-    grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav " "main main main main main aside" "footer footer footer footer footer footer";
+    grid-template-areas: "header header header header header header" "nav nav nav nav nav nav" "main main main main main aside" "footer footer footer footer footer footer";
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #8b1a1a;
 }
 header{
-    background-color: #2a5c7a;
+    color: white;
     text-align: center;
     grid-area: header;
-    height: 100px;
+    height: auto;
     border: 1px solid #8b1a1a;
+    box-sizing: border-box;
+    margin-bottom: -10px;
 }
 nav{
     background-color: #2a5c7a;
@@ -32,6 +41,7 @@ nav{
     height: 50px;
     display: flex;
     border: 1px solid #8b1a1a;
+    z-index: 99;
 }
 nav a{
     display: flex;
@@ -45,7 +55,10 @@ nav a{
 }
 nav ul{
     height: 100%;
-    background-color: #1e4560;
+    background-image: url("../images/concrete.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:#8b1a1a;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -72,13 +85,12 @@ article{
     padding: 10px;
     border: 1px solid #8b1a1a;
     margin-top: 10px;
-
+    scroll-margin-top: 50px;
 }
 aside{
     background-color: #d4c49a;
     grid-area: aside;
     width: 100%;
-    margin-top: 72px;
     border: 1px solid #8b1a1a;
 }
 .aside-sticky{
@@ -103,16 +115,18 @@ section{
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #8b1a1a;
+    scroll-margin-top: 50px;
 
 }
 
 footer{
-    background-color: #2a5c7a;
+    background-color: #1e4560;
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
     grid-area: footer;
-    height: 100px;
     border: 1px solid #8b1a1a;
-    padding: 10px;
-    align-items: center;
 }
 
 p{
@@ -127,7 +141,6 @@ h4{
     font-size: 1rem;
     font-style: italic;
     color: #c8390a;
-
 }
 
 @media (max-width: 600px) {
@@ -136,8 +149,8 @@ h4{
     }
     body{
         grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav" "main main main main main main" "footer footer footer footer footer footer";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         width: 100%;
     }
-    
+ 
 }

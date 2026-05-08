@@ -1,0 +1,65 @@
+body {
+    background-image: url("../images/Atomic.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+
+}
+mark{
+    background-color: #8b1a1a;
+    border: 1px solid #8b1a1a;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    
+}
+
+.email {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #8b1a1a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b1a1a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.button {
+    background-color: #8b1a1a;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+}
