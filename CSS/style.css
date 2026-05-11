@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box; 
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 body{
     color: #1a1a1a;
     margin: 0 auto;
@@ -24,6 +26,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 1px solid #8b1a1a;
 }
+
 header{
     color: white;
     text-align: center;
@@ -33,6 +36,7 @@ header{
     box-sizing: border-box;
     margin-bottom: -10px;
 }
+
 nav{
     background-color: #2a5c7a;
     grid-area: nav;
@@ -43,6 +47,7 @@ nav{
     border: 1px solid #8b1a1a;
     z-index: 99;
 }
+
 nav a{
     display: flex;
     align-items: center;
@@ -55,31 +60,53 @@ nav a{
 #hover1, #hover2, #hover3, #hover4{
     display: none;
 }
+
 #l1:hover #default1{
     display: none;
 }
+
 #l1:hover #hover1{
     display: block;
 }
+
 #l2:hover #default2{
     display: none;
 }
+
 #l2:hover #hover2{
     display: block;
 }
+
 #l3:hover #default3{
     display: none;
 }
+
 #l3:hover #hover3{
     display: block;
 }
+
 #l4:hover #default4{
     display: none;
 }
+
 #l4:hover #hover4{
     display: block;
 }
 
+nav a:hover {
+    color: white;
+}
+
+nav li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 50px;
+    object-fit: contain;
+}
 
 nav ul{
     height: 100%;
@@ -95,6 +122,7 @@ nav ul{
     margin: 0;
     padding: 0;
 }
+
 nav li{
     display: block;
     list-style-type: none;
@@ -103,9 +131,12 @@ nav li{
 nav li:last-child{
     margin-left: auto;
 }
+
 nav img{
-    height: 60px;
+    height: 50px;
+    object-fit: contain;
 }
+
 main{
     background-color: #e8d9b0;
     grid-area: main;
@@ -120,12 +151,14 @@ article{
     margin-top: 10px;
     scroll-margin-top: 50px;
 }
+
 aside{
     background-color: #d4c49a;
     grid-area: aside;
     width: 100%;
     border: 1px solid #8b1a1a;
 }
+
 .aside-sticky{
     display: flex;
     flex-direction: column;
@@ -138,9 +171,12 @@ figure{
     margin: 0px;
     border: 1px solid #8b1a1a;
 }
+
 figure img{
     width: 100%;
     height: auto;
+    display: block;
+    
 }
 
 section{
@@ -153,13 +189,13 @@ section{
 }
 
 footer{
-    background-color: #1e4560;
-    width: 100%;
-    height: auto;
-    color: white;
+    background-color: #c8b888;
+    color: #c8390a;
     text-align: center;
     grid-area: footer;
     border: 1px solid #8b1a1a;
+    margin: 10px 0px 0px 0px;
+
 }
 
 p{
@@ -170,6 +206,7 @@ h1{
     font-size: 1.5rem;
     color: #8b1a1a;
 }
+
 h4{
     font-size: 1rem;
     font-style: italic;
@@ -180,10 +217,12 @@ h4{
     nav{
         height: auto;
     }
+
     nav ul{
         flex-direction: column;
         align-items: flex-start;
     }
+
     nav li{
         width: 100%;
         justify-self: center;
@@ -197,6 +236,7 @@ h4{
     aside{
         display: none;
     }
+
     body{
         grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav" "main main main main main main" "footer footer footer footer footer footer";
         grid-template-columns: 1fr;
@@ -204,3 +244,27 @@ h4{
     }
  
 }
+
+@media (max-width: 700px) {
+    nav {
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav li:last-child {
+        margin-left: 0;
+    }
+
+    nav a {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    nav img {
+        height: 45px;
+    }
+} 
