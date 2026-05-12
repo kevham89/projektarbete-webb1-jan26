@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atomic Playground</title>
+    <title>Atomic Playground</title> <!-- Titeln till hemsidan som visas i webbläsarens flik. -->
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <header id="header">
-        <figure><img src="images/header.png"></figure>
+    <header id="header"> 
+        <figure><img src="images/header.png"></figure> <!-- Headern som innehåller presentationsbilden på sidan -->
     </header>
-    <nav>
-        
-        <ul>
+    <nav> <!-- Navigationsmenyn som innehåller länkarna till de olika sektionerna på sidan -->
+        <ul>    <!-- Länkarna i navigationsmenyn som leder till de olika sektionerna på sidan, samt en länk till kontakt-sidan som öppnas i en ny flik -->
             <li id="l1"><a href="#header"><img id="default1" src="images/homebase.png" alt="Home Base"><img id="hover1" src="images/homebasehl.png" alt="Home Base"></a></li>
             <li id="l2"><a href="#information"><img id="default2" src="images/thescoop.png" alt="The Scoop"><img id="hover2" src="images/thescoophl.png" alt="The Scoop"></a></li>
             <li id="l3"><a href="#about"><img id="default3" src="images/whoweare.png" alt="Who we are"><img id="hover3" src="images/whowearehl.png" alt="Who we are"></a></li>
             <li id="l4"><a href="contact.html" target="_blank"><img id="default4" src="images/drop.png" alt="Drop Us a Line"><img id="hover4" src="images/drophl.png" alt="Drop Us a Line"></a></li>
         </ul>
     </nav>
-        <main>
+        <main> <!-- Huvudinnehållet på sidan som innehåller tre artiklar och två sektioner. Använding av "<h1> och <h4>" för att kunna bestämma olika storlekar på titeln av altiklarna. <p> användes för att kunna bryta upp artiklarna så att de får plats. Artiklarna är uppdelade med id="a1", id="a2" och id="a2". -->
             <h1>NEWS</h1>
-            <article id="a1">
+            <article id="a1"> 
                 <h1>Breakthrough Spray Lets You Skip Personality Development Entirely!</h1>
                 <h4>By Our Socially Thriving Lifestyle Reporter</h4>
                 <p>In a bold leap forward for personal improvement, the makers of Charm-O-Matic™ have announced a revolutionary product that promises to transform even the dullest dinner guest into the undeniable life of the party—in seconds. No practice, no self-reflection, and most importantly, no awkward silences required.</p>
@@ -59,14 +58,14 @@
                 <p>At press time, the company hinted at future additions to the line, including decorative bunker wallpaper and a deluxe model featuring “extra optimism.”</p>
                 <p>Because when it comes to the unknown, one thing is certain: it’s always better when you face it together—preferably with snacks.</p>
             </article>
-            <section id="information">
+            <section id="information"> <!-- På denna sektion användes åter <h1>,<h4> och <p>.  Men <ul> och <li> för att kunna få texten i list form. -->
                 <h1>Welcome to Atomic Playground</h1>
                 <h4>In a world rebuilt from ash and echoes, information is survival.</h4>
                 <p>Atomic Playground is your trusted (and occasionally questionable) source for the latest news, rumors, and discoveries from a post-apocalyptic landscape where civilization has been rebuilt in fragments and reality is never fully stable.</p>
                 <p>From irradiated city-states and wandering trader caravans to rogue AI broadcasts and bunker-born politics, we bring you stories from every corner of the wasteland. If it’s happening out there, you’ll hear about it here first assuming the signal survives the journey.</p>
                 <h4>What We Cover</h4>
                 <p>
-                    <ul>
+                    <ul> <!-- En lista över vad sidan täcker, <li> används för att det blir en uppdelning -->
                         <li>Faction movements & territorial shifts across the fractured world</li>
                         <li>Mutant wildlife sightings and environmental hazards to avoid (or investigate… carefully)</li>
                         <li>Tech relic recoveries from the Old World and their unpredictable side effects</li>
@@ -95,14 +94,13 @@
                 <p>Because if no one writes it down… it didn’t happen.</p>
             </section>
         </main>
-
-        <aside>
+        <aside> <!-- Asiden innehåller tre bilder som är placerade i en kolumn på sidan. Den sista bilden har klassen "aside-sticky" som gör att den stannar kvar på skärmen när man scrollar ner för sen sekionen och inkommer till <footer>. --> 
             <figure><img src="images/charm-o-matic.png"></figure>
             <figure><img src="images/tidymind.png"></figure>
             <figure class="aside-sticky"><img src="images/fallout.png"></figure>
         </aside>
     
-        <footer>
+        <footer> <!-- Footern som innehåller en bild och en text som visar att sidan är skyddad av copyright. OBS: Det finns en elev på bilden. -->
             <figure><img src="images/Copyright.png"></figure>
             <h6> © Copyright Atomic Playground</h6>
         </footer>

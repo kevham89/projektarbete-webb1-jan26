@@ -1,10 +1,16 @@
+/* vi använder wildcard "*" för att lägga till boxsizing på alla element, vilket gör att alla element räknar med deras border till totalstorleken så att vi inte behöver räkna och anpassa det själva. */
 * {
     box-sizing: border-box; 
 }
 
+/* eftersom att länkarna länkar till element på sidan så vill vi att sidan ska scrolla till elementet istället för att hoppa till det direkt. */
 html{
     scroll-behavior: smooth;
 }
+
+
+
+/* Vi använder oss utav grid area för att placera ut element på hemsidan, vi skalar hemsidan till 80% utav användarens skärm, men vi har även satt en maxstorlek till 1200px*/
 
 body{
     color: #1a1a1a;
@@ -18,8 +24,7 @@ body{
     background-position: top;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    max-width: 1200px;
-    min-height: 100vh;
+    max-width: 1200px;  
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas: "header header header header header header" "nav nav nav nav nav nav" "main main main main main aside" "footer footer footer footer footer footer";
@@ -27,18 +32,17 @@ body{
     border: 1px solid #8b1a1a;
 }
 
+
 header{
     color: white;
-    text-align: center;
     grid-area: header;
     height: auto;
     border: 1px solid #8b1a1a;
-    box-sizing: border-box;
-    margin-bottom: -10px;
 }
 
+
+/* z-index används för att navigeringsmenyn inte ska täckas över utav våran "sticky" bild i aside*/
 nav{
-    background-color: #2a5c7a;
     grid-area: nav;
     position: sticky;
     top: 0;
@@ -57,6 +61,8 @@ nav a{
     color: #1e4560;
 }
 
+
+/* Nedan kod byter ut bilderna som vi använder för våra länkar när muspekaren ligger över så att användaren ser att det går att klicka på den. */
 #hover1, #hover2, #hover3, #hover4{
     display: none;
 }
@@ -97,12 +103,15 @@ nav a:hover {
     color: white;
 }
 
+
+
 nav li {
     height: 100%;
+    width: auto;
     display: flex;
     align-items: center;
+    list-style-type: none;
 }
-
 nav img {
     height: 50px;
     object-fit: contain;
@@ -117,24 +126,16 @@ nav ul{
     background-color:#8b1a1a;
     text-decoration: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-nav li{
-    display: block;
-    list-style-type: none;
-}
-
+/* här skjuter vi över den sista länken till högra sidan utav skärmen.*/
 nav li:last-child{
     margin-left: auto;
-}
-
-nav img{
-    height: 50px;
-    object-fit: contain;
 }
 
 main{
@@ -144,6 +145,7 @@ main{
     border: 1px solid #8b1a1a;
 }
 
+/* scroll margin top används för att säkerställa att hela artikeln finns med på skärmen när användaren använder navigeringslänkarna för att scrolla till de olika artiklarna.*/
 article{
     background-color: #f0e6c0;
     padding: 10px;
@@ -159,6 +161,7 @@ aside{
     border: 1px solid #8b1a1a;
 }
 
+/* här gör vi så att sista bilden i aside följer med användaren när hen scrollar ned på hemsidan.*/ 
 .aside-sticky{
     display: flex;
     flex-direction: column;
@@ -198,6 +201,7 @@ footer{
 
 }
 
+/* REM används för att texten ska vara responsiv till användarens webbläseinställningar.*/
 p{
     font-size: 0.875rem;
 }
@@ -212,28 +216,35 @@ h4{
     font-style: italic;
     color: #c8390a;
 }
+h6{
+    font-size: 0.7rem;
+}
 
-@media (max-width: 920px) {
+
+/* här gör vi ändringar på våran CSS baserat på användares skärmstorlek. vi använder 2 brytpunker, den första för att ändra navigerings menyn så att det blir lättare att klicka på för mindre skärmar, den andra brytpunkten plockar bort ASIDE när denna inte får plats på skärmen längre. */
+@media (max-width: 820px) {
     nav{
         height: auto;
     }
 
     nav ul{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     nav li{
-        width: 100%;
-        justify-self: center;
-        background-image: url("../images/navbartexture.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        justify-content: center;
+
     }
+    nav li:last-child{
+    margin-left: 0;
 }
-@media (max-width: 600px) {
-    aside{
+.aside-sticky{
+    top: 200px;
+}
+}
+@media (max-width: 700px) {
+        aside{
         display: none;
     }
 
@@ -241,30 +252,5 @@ h4{
         grid-template-areas:    "header header header header header header" "nav nav nav nav nav nav" "main main main main main main" "footer footer footer footer footer footer";
         grid-template-columns: 1fr;
         width: 100%;
-    }
- 
-}
-
-@media (max-width: 700px) {
-    nav {
-        height: auto;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    nav li:last-child {
-        margin-left: 0;
-    }
-
-    nav a {
-        justify-content: center;
-        padding: 12px;
-    }
-
-    nav img {
-        height: 45px;
     }
 } 

@@ -1,4 +1,4 @@
-body {
+body { /* Body är en behållare som innehåller allt innehåll på sidan. */
     background-image: url("../images/Atomic.png");
     background-size: contain;
     background-color: #cfa158;
@@ -14,22 +14,21 @@ body {
     color: white;
 }
 
-
-mark{
+mark{ /* Mark är en HTML-element som används för att markera text. */
     background-color: #8b1a1a;
     border: 1px solid #8b1a1a;
     border-radius: 5px;
     color: white;
 }
 
-.name {
+.name { /* Name är en klass som används för att styla namnet på personen som kontaktar. */
     font-size: 24px;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;    
 }
 
-.email {
+.email { /* Email är en klass som används för att styla e-postadressen på personen som kontaktar. */
     font-size: 24px;
     font-weight: bold;
     font-style: italic;
@@ -38,7 +37,7 @@ mark{
     color: white;
 }
 
-.message {
+.message { /* Message är en klass som används för att styla meddelandet som personen som kontaktar har skrivit. */
     font-size: 24px;
     font-weight: bold;
     color: #8b1a1a;
@@ -46,7 +45,7 @@ mark{
     color: white;
 }
 
-.button {
+.button { /* Button är en klass som används för att styla knappen som personen som kontaktar kan klicka på för att skicka meddelandet. */
     background-color: #8b1a1a;
     color: white;
     font-size: 24px;
@@ -58,13 +57,13 @@ mark{
     animation: blink 1s infinite;
 }
 
-@keyframes blink {
+@keyframes blink { /* Blink är en animation som används för att få knappen att blinka. 1 är synlig och 0 är osynlig. Procentet gör att elementet går i takt efter varann.  */
     0%   { opacity: 1; }
     50%  { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@media (max-width: 490px){
+@media (max-width: 490px){ /* Media är en CSS-regel som används för att göra sidan responsiv. Max-width gör att regeln endast gäller när skärmen är mindre än 490px. */
     body {
     background-image: none;
 }
