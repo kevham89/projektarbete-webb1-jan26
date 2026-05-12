@@ -239,6 +239,8 @@ h6{
     nav li:last-child{
     margin-left: 0;
 }
+
+/* Säkerställer att våran "sticky" bild i ASIDE inte lägger sig under den nya navigeringsmenyn */
 .aside-sticky{
     top: 200px;
 }
